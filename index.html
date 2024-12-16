@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatiana's Coffee Garden</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vladimir+Script&display=swap" rel="stylesheet">\
+  
+    
+</head>
+<body>
+   
+    <header class="header">
+        <h1 class="title">Tatiana's Coffee Garden</h1>
+
+        
+        <nav>
+        
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="Contact-Us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Slideshow Section -->
+<div class="slideshow-container">
+    <div class="slide fade">
+        <img src="image1.png" alt="Image 1">
+    </div>
+    <div class="slide fade">
+        <img src="image2.jpg" alt="Image 2">
+    </div>
+    <div class="slide fade">
+        <img src="image3.jpg" alt="Image 3">
+    </div>
+    <div class="slide fade">
+        <img src="image4.jpg" alt="Image 4">
+    </div>
+    <div class="slide fade">
+        <img src="image5.jpg" alt="Image 5">
+    </div>
+
+    <!-- Navigation Arrows -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+    <!-- Dots/Indicators -->
+    <div class="dots-container">
+        <span class="dot" onclick="setSlide(1)"></span>
+        <span class="dot" onclick="setSlide(2)"></span>
+        <span class="dot" onclick="setSlide(3)"></span>
+        <span class="dot" onclick="setSlide(4)"></span>
+        <span class="dot" onclick="setSlide(5)"></span>
+    </div>
+</div>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Change slide manually
+function changeSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+// Set a specific slide
+function setSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+// Show slides function
+function showSlides(n) {
+    let slides = document.querySelectorAll(".slide");
+    let dots = document.querySelectorAll(".dot");
+
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+
+    slides.forEach(slide => slide.style.display = "none");
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active");
+}
+
+// Automatic Slideshow (optional)
+setInterval(() => changeSlide(1), 5000);
+</script>
+        <div class="opening-hours">
+            <h2>Opening Hours</h2>
+            <div class="hours-container">
+                
+                <div class="column">
+                    <p>Monday</p>
+                    <p>Tuesday</p>
+                    <p>Wednesday</p>
+                    <p>Thursday</p>
+                    <p>Friday</p>
+                    <p>Saturday</p>
+                    <p>Sunday</p>
+                </div>
+             
+                <div class="column">
+                    <p>From 9 to 11</p>
+                    <p>From 9 to 11</p>
+                    <p>From 9 to 11</p>
+                    <p>From 9 to 11</p>
+                    <p>From 9 to 11</p>
+                    <p>From 9 to 11</p>
+                    <p>From 9 to 11</p>
+                </div>
+            </div>
+        </div>
+        <div class="info-boxes">
+            <div class="box">
+                <h2>Stay Updated</h2>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Updated!</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://instagram.com">Instagram</a>
+            <a href="https://twitter.com">Twitter</a>
+        </div>
+        <p>Open from 9 till 11 everyday!</p>
+    </footer>
+</body>

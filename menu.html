@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatiana's Coffee Garden</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vladimir+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Tatiana's Coffee Garden</h1>
+
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="Contact-Us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+
+        <div class="menu-container">
+            <div class="menu-box">
+                
+                <div class="menu-section">
+                    <h2 class="menu-title">Coffee </h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <img src="caramel.jpg" alt="caramel">
+                            <h4>Iced caramel latte </h4>
+                            <p>$4.50</p>
+                            <button>Buy Now</button>
+                            
+
+                        </div>
+                        <div class="menu-item">
+                            <img src="blatte.jpg" alt="latte">
+                            <h4>Iced blueberry latte</h4>
+                            <p>$6.50</p>
+                            <button>Buy Now</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="matcha.jpg" alt="matcha">
+                            <h4>Iced matcha</h4>
+                            <p>$4.00</p>
+                            <button>Buy Now</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="tea.jpg" alt="tea ">
+                            <h4>Iced tea</h4>
+                            <p>$3.50</p>
+                            <button>Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="menu-section">
+                    <h2 class="menu-title">Hand-Ties</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <img src="tulip.jpg" alt="tulip">
+                            <h4>Tulip Bouquet</h4>
+                            <p>$15.00</p>
+                            <button>Buy Now</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="daisys.jpg" alt="flowers">
+                            <h4>Daisy Arrangement</h4>
+                            <p>$20.00</p>
+                            <button>Buy Now</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="lilys.jpg" alt="flower">
+                            <h4>Lily's Bundle</h4>
+                            <p>$32.00</p>
+                            <button>Buy Now</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="rose.jpg" alt=" Arrangement">
+                            <h4>Roses Arrangement</h4>
+                            <p>$18.00</p>
+                            <button>Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-section">
+                    <h2 class="menu-title">Coffee & Hand-Ties</h2>
+                    <div class="checkbox-grid">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="blatte" data-price="6.50">
+                    <label for="blatte">Iced Blueberry Latte {6.50$}</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="caramel" data-price="4.50">
+                    <label for="caramel">Iced Caramel Latte {4.50$}</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="matcha" data-price="4.00">
+                    <label for="matcha">Iced Matcha {4.00$}</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="tea" data-price="3.50">
+                    <label for="tea">Iced Tea {3.50$}</label>
+                </div>
+        
+           
+                <div class="checkbox-item">
+                    <input type="checkbox" id="roses_bouquet" data-price="18.00">
+                    <label for="roses_bouquet">Roses Arrangement {18.00$}</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="daisy" data-price="20.00">
+                    <label for="daisy">Daisy's Arrangement {20.00$}</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="lily_bundle" data-price="32.00">
+                    <label for="lily_bundle">Lily's Bundle {32.00$}</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="tulip_bouquet" data-price="15.00">
+                    <label for="tulip_bouquet">Tulip Bouquet {15.00$}</label>
+                </div>
+            </div>
+            <!-- Buy Now Button -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <button id="buyNowButton" class="buy-now-button">Buy Now - Total: $0.00</button>
+            </div>
+        </div>
+                
+               <script>
+                document.addEventListener("DOMContentLoaded", function () {
+    const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+    const buyNowButton = document.getElementById('buyNowButton');
+
+   
+    function calculateTotal() {
+        let total = 0;
+        checkboxes.forEach((checkbox) => {
+            if (checkbox.checked) {
+                total += parseFloat(checkbox.getAttribute('data-price'));
+            }
+        });
+        buyNowButton.textContent = `Buy Now - Total: $${total.toFixed(2)}`;
+    }
+
+   
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', calculateTotal);
+    });
+});
+               </script>
+               
+            </div>
+           
+        </div>
+        
+        <footer>
+            <div class="social-links">
+                <a href="https://facebook.com">Facebook</a>
+                <a href="https://instagram.com">Instagram</a>
+                <a href="https://twitter.com">Twitter</a>
+            </div>
+            <p>Open from 9 till 11 everyday!</p>
+        </footer>
+    </body>
+    </html>

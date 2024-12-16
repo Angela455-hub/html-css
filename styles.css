@@ -1,0 +1,1100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F2E9;
+    color: #36454F;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #F9E6E6;
+    border-bottom: 2px solid #36454F;
+}
+
+.title {
+    font-family: 'Vladimir Script', cursive;
+    font-size: 3rem;
+    color: #36454F;
+    margin: 0;
+    line-height: 1.2;
+    width: 70%;
+    margin: 0 auto; 
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000000;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #36454F;
+    color: #F5F2E9;
+    border: 1px solid #36454F;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    label.logo {
+        font-size: 20px;
+    }
+
+    ul.nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    ul.nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    ul.nav-links li a {
+        font-size: 18px;
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+    ul.nav-links li a:hover {
+        background-color: #F5F2E9; /* Light beige */
+        color: #36454F; /* Dark slate gray */
+        border-radius: 5px;
+    }
+}
+
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    height: 700px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border: 2px solid #36454F;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+.dots-container {
+    text-align: center;
+    position: relative;
+    bottom: 10px;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active, .dot:hover {
+    background-color: #36454F;
+}
+
+
+.opening-hours {
+    text-align: center;
+    background-color: #F9E6E6;
+    padding: 20px;
+    border: 2px solid #36454F;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    color: #36454F;
+}
+
+.opening-hours h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    color: #000000;
+}
+
+
+.hours-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+.column {
+    flex: 1;
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+}
+
+.column p {
+    margin: 5px 0;
+}
+
+.info-boxes {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+
+.info-boxes .box {
+    width: 40%; 
+    background-color: #F9E6E6; 
+    border: 2px solid #36454F; 
+    border-radius: 8px; 
+    text-align: center;
+}
+
+.info-boxes .box h2 {
+    margin-bottom: 1rem;
+    color: #000000; 
+}
+
+
+.info-boxes .box form {
+    display: flex;
+    flex-direction: column; 
+    gap: 0.5rem; 
+}
+
+
+.info-boxes .box input {
+    padding: 0.5rem;
+    border: 1px solid #36454F; 
+    border-radius: 4px;
+}
+
+
+.info-boxes .box button {
+    padding: 0.5rem;
+    background-color: #36454F; 
+    color: #F5F2E9; 
+    border: none;
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+
+.info-boxes .box button:hover {
+    background-color: #000000; 
+}
+
+@media (max-width: 768px) {
+    /* Slideshow */
+    .slideshow-container {
+        height: 400px;
+        margin: 1rem auto;
+    }
+
+    .slide img {
+        height: 400px;  /* Adjust height of the image for mobile */
+    }
+
+    /* Buttons (Prev/Next) */
+    .prev, .next {
+        font-size: 1.2rem;  /* Smaller buttons */
+        padding: 0.4rem;
+    }
+
+    /* Dots container */
+    .dots-container {
+        margin-top: 5px;
+    }
+
+    /* Opening Hours - Keep 2 columns */
+    .opening-hours {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .opening-hours h2 {
+        font-size: 1.5rem;  /* Smaller font size for headings */
+    }
+
+    .hours-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns layout */
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .column {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    /* Info Boxes */
+    .info-boxes {
+        flex-direction: column;  /* Stack boxes vertically */
+        padding: 0.5rem;
+    }
+
+    .info-boxes .box {
+        width: 90%;  /* Make boxes more narrow */
+        margin-bottom: 1rem;
+    }
+
+    .info-boxes .box input, .info-boxes .box button {
+        font-size: 1rem;  /* Adjust font size for mobile inputs/buttons */
+        padding: 0.6rem;
+    }
+}
+
+/* Media query for tablets (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Slideshow */
+    .slideshow-container {
+        height: 500px;
+    }
+
+    .slide img {
+        height: 500px;  /* Adjust height for tablets */
+    }
+
+    /* Buttons (Prev/Next) */
+    .prev, .next {
+        font-size: 1.4rem;  /* Adjust size for tablets */
+        padding: 0.6rem;
+    }
+
+    /* Opening Hours - Keep 2 columns */
+    .opening-hours {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .opening-hours h2 {
+        font-size: 1.8rem;
+    }
+
+    .hours-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns layout */
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .column {
+        font-size: 1.1rem;
+    }
+
+    /* Info Boxes */
+    .info-boxes {
+        flex-direction: row;  /* Align boxes side by side */
+        gap: 30px;
+    }
+
+    .info-boxes .box {
+        width: 45%;  /* Set width for side-by-side boxes */
+    }
+
+    .info-boxes .box input, .info-boxes .box button {
+        font-size: 1.1rem;  /* Slightly larger font for inputs/buttons */
+    }
+}
+
+/* Media query for desktop (1025px and up) */
+@media (min-width: 1025px) {
+    /* Slideshow */
+    .slideshow-container {
+        height: 600px;  /* Full height for larger screens */
+        margin: 2rem auto;
+    }
+
+    .slide img {
+        height: 600px;  /* Maintain full height for large images */
+    }
+
+    /* Buttons (Prev/Next) */
+    .prev, .next {
+        font-size: 1.5rem;  /* Default button size */
+        padding: 0.8rem;
+    }
+
+    /* Opening Hours - Keep 2 columns */
+    .opening-hours {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .opening-hours h2 {
+        font-size: 2rem;
+    }
+
+    .hours-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns layout */
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .column {
+        font-size: 1.2rem;
+    }
+
+    /* Info Boxes */
+    .info-boxes {
+        gap: 40px;
+    }
+
+    .info-boxes .box {
+        width: 40%;  /* Standard width for desktop */
+    }
+
+    .info-boxes .box input, .info-boxes .box button {
+        font-size: 1.2rem;  /* Standard font size for desktop inputs/buttons */
+    }
+}
+.about-us {
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 1000px;
+    padding: 2rem;
+    background-color: #F9E6E6;
+    border-radius: 8px;
+    border: 2px solid #36454F;
+    text-align: center;
+}
+
+.about-us h2 { font-family: 'Vladimir Script', cursive;
+    color: #36454F;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+.reviews {
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.reviews h2 { font-family: 'Vladimir Script', cursive;
+    color: #36454F;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.review-box {
+    background-color: #F9E6E6;
+    border: 2px solid #36454F;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 80%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+}
+
+.review-box p {
+    color: #000000;
+}
+
+
+.location {
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.location h2 { font-family: 'Vladimir Script', cursive;
+    color: #36454F;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.location p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.form-container {   justify-content: center; 
+    align-items: center;    
+    min-height: 100vh;
+    background-color: #F9E6E6;
+    padding: 40px 20px; 
+    border: 2px solid #36454F;
+    border-radius: 15px;
+    width: 100%; 
+    max-width: 800px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin: 20px 0; 
+}
+
+.form-container h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #36454F;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #36454F;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #36454F;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form-group select {
+    background-color: #F5F2E9;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #36454F;
+    color: #F5F2E9;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #000000;
+}
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px; /* Less padding for smaller screens */
+        margin: 10px 0; /* Reduced margin */
+        max-width: 100%; /* Full width for mobile */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Lighter shadow */
+    }
+
+    .form-container h1 {
+        font-size: 20px; /* Smaller font size */
+        margin-bottom: 15px; /* Reduced margin */
+    }
+
+    .form-group label {
+        font-size: 14px; /* Smaller font size for labels */
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 14px; /* Smaller input text size */
+        padding: 8px; /* Reduced padding for inputs */
+    }
+
+    .submit-btn {
+        font-size: 16px; /* Smaller button text */
+        padding: 10px; /* Reduced padding */
+    }
+}
+
+/* Media query for tablet devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .form-container {
+        padding: 30px; /* Slightly more padding for tablets */
+        margin: 15px 0; /* Adjust margin */
+        max-width: 90%; /* Allow for some margins on tablets */
+    }
+
+    .form-container h1 {
+        font-size: 22px; /* Medium font size */
+        margin-bottom: 18px; /* Slightly reduced margin */
+    }
+
+    .form-group label {
+        font-size: 15px; /* Adjust label size */
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 15px; /* Adjust input text size */
+        padding: 9px; /* Adjust input padding */
+    }
+
+    .submit-btn {
+        font-size: 17px; /* Adjust button font size */
+        padding: 11px; /* Adjust button padding */
+    }
+}
+
+/* Media query for larger screens (1025px and above) */
+@media (min-width: 1025px) {
+    .form-container {
+        padding: 40px; /* Keep original padding for large screens */
+        margin: 20px 0; /* Keep original margin */
+        max-width: 800px; /* Keep max-width for larger screens */
+    }
+
+    .form-container h1 {
+        font-size: 24px; /* Keep the heading size */
+        margin-bottom: 20px; /* Keep margin */
+    }
+
+    .form-group label {
+        font-size: 16px; /* Larger font size for labels */
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 16px; /* Input font size stays the same */
+        padding: 10px; /* Padding remains the same */
+    }
+
+    .submit-btn {
+        font-size: 18px; /* Button text remains the same */
+        padding: 12px; /* Button padding remains the same */
+    }
+}
+.body{
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    min-height: 100vh;        
+    flex-direction: column;   
+    background-color: #F5F2E9; 
+}
+
+.contact-container {
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+.contact-container h1 { font-family: 'Vladimir Script', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: #36454F;
+    margin-bottom: 20px;
+
+}
+
+.social-links {
+    margin-bottom: 30px;
+}
+
+.social-link {
+    font-size: 18px;
+    color: #36454F;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-link:hover {
+    color: #F9E6E6;
+}
+
+.email-box {
+    background-color: #F9E6E6;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #36454F;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.email-box h2 {
+    color: #36454F;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.email-box input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #36454F;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.email-box button {
+    padding: 12px 20px;
+    background-color: #36454F;
+    color: #F5F2E9;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.email-box button:hover {
+    background-color: #000000;
+}
+
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 15px; /* Reduce padding for smaller screens */
+        max-width: 100%; /* Make container full-width */
+    }
+
+    .contact-container h1 {
+        font-size: 30px; /* Adjust font size for heading */
+        margin-bottom: 15px; /* Reduced margin for smaller screens */
+    }
+
+    .social-links {
+        margin-bottom: 20px; /* Reduced margin for mobile */
+    }
+
+    .social-link {
+        font-size: 16px; /* Smaller font size for social links */
+        margin: 0 10px; /* Reduce margin between links */
+    }
+
+    .email-box {
+        padding: 20px; /* Reduced padding for smaller screens */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Lighter shadow */
+    }
+
+    .email-box h2 {
+        font-size: 20px; /* Smaller heading size */
+        margin-bottom: 15px; /* Reduced margin */
+    }
+
+    .email-box input {
+        width: 100%; /* Full width for mobile */
+        font-size: 14px; /* Smaller input text */
+        padding: 8px; /* Reduced padding */
+    }
+
+    .email-box button {
+        font-size: 16px; /* Smaller button text */
+        padding: 10px 18px; /* Reduced button padding */
+    }
+}
+
+/* Media query for tablet devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contact-container {
+        padding: 25px; /* Slightly larger padding for tablets */
+        max-width: 90%; /* Container width stays smaller than full width */
+    }
+
+    .contact-container h1 {
+        font-size: 40px; /* Medium font size for tablet */
+        margin-bottom: 18px; /* Reduced margin for tablets */
+    }
+
+    .social-links {
+        margin-bottom: 25px; /* Slightly smaller margin for tablet */
+    }
+
+    .social-link {
+        font-size: 17px; /* Adjust social link size */
+        margin: 0 12px; /* Adjust spacing between links */
+    }
+
+    .email-box {
+        padding: 25px; /* Adjust padding for tablets */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow */
+    }
+
+    .email-box h2 {
+        font-size: 22px; /* Medium heading size */
+        margin-bottom: 18px; /* Adjust margin */
+    }
+
+    .email-box input {
+        font-size: 15px; /* Adjust input font size */
+        padding: 9px; /* Adjust padding */
+    }
+
+    .email-box button {
+        font-size: 17px; /* Medium button font size */
+        padding: 11px 18px; /* Adjust padding for tablets */
+    }
+}
+
+/* Media query for larger screens (1025px and above) */
+@media (min-width: 1025px) {
+    .contact-container {
+        padding: 30px; /* Keep original padding for large screens */
+        max-width: 800px; /* Keep original max-width */
+    }
+
+    .contact-container h1 {
+        font-size: 50px; /* Keep original heading font size */
+        margin-bottom: 20px; /* Keep original margin */
+    }
+
+    .social-links {
+        margin-bottom: 30px; /* Keep original margin */
+    }
+
+    .social-link {
+        font-size: 18px; /* Keep original font size */
+        margin: 0 15px; /* Keep original margin between links */
+    }
+
+    .email-box {
+        padding: 30px; /* Keep original padding */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Keep original shadow */
+    }
+
+    .email-box h2 {
+        font-size: 24px; /* Keep original heading size */
+        margin-bottom: 20px; /* Keep original margin */
+    }
+
+    .email-box input {
+        font-size: 16px; /* Keep input text size */
+        padding: 10px; /* Keep padding the same */
+    }
+
+    .email-box button {
+        font-size: 18px; /* Keep button font size */
+        padding: 12px 20px; /* Keep button padding */
+    }
+}
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    
+    box-sizing: border-box;
+    background-color: #F9E6E6;
+}
+
+.menu-box {
+    max-width: 900px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #36454F;
+    background-color: #F5F2E9;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-section {
+    margin-bottom: 2rem;
+}
+
+.menu-title {  font-family: 'Vladimir Script', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #36454F;
+    text-align: center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.menu-item {
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid #36454F;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+.menu-item img {
+    width: 95%; 
+    height: 450px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin-bottom: 0.5rem; 
+}
+
+.menu-item h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    color: #36454F;
+}
+
+.menu-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-item input {
+    accent-color: #36454F; 
+}
+.menu-item button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color:#F2D4D4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item button:hover {
+    background-color: #F9E6E6;
+}
+.buy-now-button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #F2D4D4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now-button:hover {
+    background-color: #F9E6E6;
+}
+
+.menu-item button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #F2D4D4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item button:hover {
+    background-color: #F9E6E6;
+}
+@media (max-width: 768px) {
+    .menu-box {
+        padding: 1rem;
+    }
+
+    .menu-title {
+        font-size: 2.5rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .menu-item img {
+        height: 300px;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .checkbox-item {
+        font-size: 0.9rem;
+    }
+
+    .menu-item h4 {
+        font-size: 1rem;
+    }
+
+    .menu-item p {
+        font-size: 0.9rem;
+    }
+
+    .buy-now-button, .menu-item button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Media query for tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu-box {
+        padding: 1.5rem;
+    }
+
+    .menu-title {
+        font-size: 3rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
+    }
+
+    .menu-item img {
+        height: 400px;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .checkbox-item {
+        font-size: 1rem;
+    }
+
+    .menu-item h4 {
+        font-size: 1.2rem;
+    }
+
+    .menu-item p {
+        font-size: 1rem;
+    }
+
+    .buy-now-button, .menu-item button {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Media query for laptops and desktops (2 columns, 2 rows) */
+@media (min-width: 1025px) {
+    .menu-box {
+        padding: 2rem;
+    }
+
+    .menu-title {
+        font-size: 3.5rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns */
+        grid-template-rows: repeat(2, auto); /* 2 rows */
+    }
+
+    .menu-item img {
+        height: 450px;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .checkbox-item {
+        font-size: 1.1rem;
+    }
+
+    .menu-item h4 {
+        font-size: 1.3rem;
+    }
+
+    .menu-item p {
+        font-size: 1.1rem;
+    }
+
+    .buy-now-button, .menu-item button {
+        padding: 0.7rem 1.5rem;
+        font-size: 1.1rem;
+    }
+}
+footer {
+    padding: 1rem 2rem;
+    background-color: #36454F;
+    color: #F5F2E9;
+    text-align: center;
+}
+
+footer .social-links {
+    margin-bottom: 1rem;
+}
+
+footer .social-links a {
+    text-decoration: none;
+    color: #F9E6E6;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #000000;
+}
